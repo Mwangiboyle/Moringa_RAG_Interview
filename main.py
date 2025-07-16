@@ -16,7 +16,7 @@ import shutil
 load_dotenv()
 
 # Load API keys
-api_key = st.sidebar.text_input(type="password", label="Enter your Mistral api key",)
+api_key =os.getenv("MISTRAL_API_KEY")
 groq_api_key = os.getenv("GROQ_API_KEY")
 #os.environ['GOOGLE_API_KEY'] = os.getenv("GOOGLE_API_KEY")
 
@@ -26,7 +26,7 @@ db_file = 'chat_history.db'
 conn = database.create_connection(db_file)
 database.create_table(conn)
 
-st.title("Gemma Document Q & A Chatbot")
+st.title("AI Powered Assistant Chatbot")
 ai=st.chat_message("assistant")
 ai.write("How may I help you today")
 
