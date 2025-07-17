@@ -16,7 +16,9 @@ import shutil
 load_dotenv()
 
 # Load API keys
-api_key =os.getenv("MISTRAL_API_KEY")
+MISTRAL_API_KEY='LuJnJnuNRFUjf3fG7DNSACJGKupUC3bz'
+
+api_key =MISTRAL_API_KEY
 groq_api_key = os.getenv("GROQ_API_KEY")
 #os.environ['GOOGLE_API_KEY'] = os.getenv("GOOGLE_API_KEY")
 
